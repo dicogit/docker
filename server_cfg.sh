@@ -3,17 +3,17 @@ sudo yum install git -y
 sudo yum install maven -y
 sudo yum install docker -y
 sudo systemctl start docker
-if [ -d "addrbook" ];
+if [ -d "docker_addrbook" ];
 then
     echo "repo is cloned and exists"
-    cd /home/ec2-user/addrbook
+    cd /home/ec2-user/docker_addrbook
    #git pull origin addrbook
-    git checkout addrbook
+    git checkout docker_addrbook
 else
     git clone https://github.com/dicogit/Test.git
-    cd /home/ec2-user/addrbook
-    git checkout addrbook
+    cd /home/ec2-user/docker_addrbook
+    git checkout docker_addrbook
 fi
 mvn package
-sudo cp /home/ec2-user/addrbook/target/addressbook.war /home/ec2-user/addrbook/
-sudo docker build -t $1:$2 /home/ec2-user/addrbook/
+sudo cp /home/ec2-user/docker_addrbook/target/addressbook.war /home/ec2-user/docker_addrbook/
+sudo docker build -t $1:$2 /home/ec2-user/docker_addrbook/
