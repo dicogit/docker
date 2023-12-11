@@ -7,7 +7,7 @@ if [ -d "Test" ];
 then
     echo "repo is cloned and exists"
     cd /home/ec2-user/Test
-   #git pull origin addrbook
+    git pull origin addrbook
     git checkout docker_addrbook
 else
     git clone https://github.com/dicogit/Test.git
