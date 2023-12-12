@@ -4,8 +4,8 @@ pipeline {
         maven 'slave'
     }
     environment {
-        remote1="ec2-user@3.111.51.68"
-        remote2="ec2-user@13.233.26.115"
+        remote1="ec2-user@65.1.107.43"
+        remote2="ec2-user@13.232.23.141"
         REPONAME='devopsdr/pub'
     }
     parameters {
