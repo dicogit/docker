@@ -16,5 +16,5 @@ else
     git checkout docker_addrbook
 fi
 mvn package
-sudo cp /home/ec2-user/docker/docker_addrbook/target/addressbook.war /home/ec2-user/docker/docker_addrbook/
-sudo docker build -t $1:$2 /home/ec2-user/docker/docker_addrbook/
+sudo cp /home/ec2-user/docker/target/addressbook.war /home/ec2-user/docker/
+sudo docker build -t $1:$2 /home/ec2-user/docker/
