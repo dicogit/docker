@@ -10,7 +10,7 @@ then
     #git pull origin addrbook
     git checkout docker_addrbook
 else
-    git https://github.com/dicogit/docker.git
+    git clone https://github.com/dicogit/docker.git
     cd /home/ec2-user/docker
     git pull origin docker_addrbook
     git checkout docker_addrbook
